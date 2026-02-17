@@ -3,40 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwiftCart</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
-    <script src="./index.js"></script>
-    <title>SwiftCart</title>
   </head>
-  <body>
+  <body class="bg-gray-100">
     <header>
       <nav class="bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between h-16">
-            <div
-              class="flex-shrink-0 flex items-center text-purple-600 font-bold text-xl"
-            >
-              SwiftCart
-            </div>
+          <div class="flex justify-between h-16 items-center">
+            <div class="text-purple-600 font-bold text-xl">SwiftCart</div>
 
             <div class="hidden md:flex space-x-6 items-center">
-              <a href="#" class="text-purple-600 font-semibold">Home</a>
-              <a href="#" class="text-gray-700 hover:text-purple-600"
+              <a href="#home" class="text-purple-600 font-semibold">Home</a>
+              <a
+                href="./product.html"
+                class="text-gray-700 hover:text-purple-600"
                 >Products</a
               >
-              <a href="#" class="text-gray-700 hover:text-purple-600">About</a>
-              <a href="#" class="text-gray-700 hover:text-purple-600"
+              <a href="#about" class="text-gray-700 hover:text-purple-600"
+                >About</a
+              >
+              <a href="#contact" class="text-gray-700 hover:text-purple-600"
                 >Contact</a
               >
             </div>
+
             <div class="flex items-center">
               <button class="text-gray-700 hover:text-purple-600">
                 <i class="fa-solid fa-cart-arrow-down"></i>
@@ -48,33 +46,173 @@
                 id="menu-btn"
                 class="text-gray-700 hover:text-purple-600 focus:outline-none"
               >
-                <i
-                  class="fa-solid fa-bars fa-lg"
-                  style="color: rgba(177, 151, 252, 1)"
-                ></i>
+                <i class="fa-solid fa-bars fa-lg text-purple-400"></i>
               </button>
             </div>
           </div>
         </div>
 
         <div id="menu" class="hidden md:hidden px-4 pb-4 space-y-2">
-          <a href="#" class="block text-purple-600 font-semibold">Home</a>
-          <a href="#" class="block text-gray-700 hover:text-purple-600"
+          <a href="#home" class="block text-purple-600 font-semibold">Home</a>
+          <a
+            href="./product.html"
+            class="block text-gray-700 hover:text-purple-600"
             >Products</a
           >
-          <a href="#" class="block text-gray-700 hover:text-purple-600"
+          <a href="#about" class="block text-gray-700 hover:text-purple-600"
             >About</a
           >
-          <a href="#" class="block text-gray-700 hover:text-purple-600"
+          <a href="#contact" class="block text-gray-700 hover:text-purple-600"
             >Contact</a
           >
         </div>
       </nav>
     </header>
-    <section>
-      <div class="bannear ">
 
+    <section
+      class="relative bg-cover bg-center h-screen flex items-center justify-center text-center"
+      style="background-image: url(&quot;./image/banner-image.png&quot;)"
+    >
+      <div class="relative z-10 max-w-xl px-4">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+          Best Collection For You
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-6">
+          Discover the latest trends in fashion, electronics, and more. Shop
+          with confidence and style.
+        </p>
+        <a
+          href="./product.html"
+          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition"
+        >
+          Shop Now
+        </a>
       </div>
     </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 bg-gray-100">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Us</h2>
+        <p class="text-gray-600 mb-12">
+          We provide the best shopping experience with top-notch services.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition"
+          >
+            <div class="text-4xl mb-4 text-purple-400">
+              <i class="fa-solid fa-cart-flatbed fa-beat"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
+            <p class="text-gray-600">
+              Get your orders delivered quickly and efficiently.
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition"
+          >
+            <div class="text-4xl mb-4 text-purple-400">
+              <i class="fa-solid fa-message"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+            <p class="text-gray-600">
+              Our support team is available around the clock.
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition"
+          >
+            <div class="text-4xl mb-4 text-purple-400">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Secure Payment</h3>
+            <p class="text-gray-600">
+              Safe and secure transactions with encrypted systems.
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition"
+          >
+            <div class="text-4xl mb-4 text-purple-400">
+              <i class="fa-solid fa-rotate-left"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Easy Returns</h3>
+            <p class="text-gray-600">Return products easily within 30 days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trend -->
+    <section class="py-12 bg-gray-100">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-3xl font-bold">🔥 Trending Now</h2>
+          <a
+            href="./product.html"
+            class="text-purple-600 font-semibold hover:text-purple-800 transition"
+            >More →</a
+          >
+        </div>
+        <div
+          id="trendingProducts"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Foter -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div
+        class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+      >
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-2">SwiftCart</h2>
+          <p class="text-gray-400">
+            Your one-stop shop for fashion and lifestyle needs.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+          <ul>
+            <li>
+              <a href="#home" class="hover:text-white transition">Home</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Support</h3>
+          <ul>
+            <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Subscribe</h3>
+          <p class="text-gray-400 mb-4">
+            Get the latest news and resources weekly.
+          </p>
+          <form class="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full px-4 py-2 rounded-l-md focus:outline-none text-gray-700"
+            />
+            <button
+              type="submit"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-gray-500 text-sm">
+        © 2026 SwiftCart. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
   </body>
 </html>

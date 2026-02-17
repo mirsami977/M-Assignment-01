@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwiftCart - Category Wise Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Nav -->
+    <nav class="bg-white shadow-md flex justify-between items-center px-6 py-4">
+      <div class="text-purple-600 font-bold text-xl">SwiftCart</div>
+      <div class="hidden md:flex gap-6">
+        <a href="./index.html" class="text-purple-600 font-semibold">Home</a>
+        <a href="./product.html" class="text-gray-700 hover:text-purple-600"
+          >Products</a
+        >
+        <a href="./index.html" class="text-gray-700 hover:text-purple-600"
+          >About</a
+        >
+        <a href="./index.html" class="text-gray-700 hover:text-purple-600"
+          >Contact</a
+        >
+      </div>
+      <button
+        onclick="showCart()"
+        class="relative text-gray-700 hover:text-purple-600"
+      >
+        <i class="fa-solid fa-cart-arrow-down fa-lg"></i>
+        <span
+          id="cartCount"
+          class="absolute -top-2 -right-2 bg-purple-600 text-white text-xs px-2 rounded-full"
+          >0</span
+        >
+      </button>
+    </nav>
+
+    <!-- Cart -->
+    <div
+      id="cartModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center"
+    >
+      <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+        <button
+          onclick="closeCart()"
+          class="absolute top-2 right-2 text-gray-500 hover:text-red-600"
+        >
+          ✖
+        </button>
+        <h2 class="text-2xl font-bold mb-4">🛒 Your Cart</h2>
+        <div id="cartItems"></div>
+        <p class="mt-4 font-semibold">
+          Total Items: <span id="totalItems">0</span>
+        </p>
+        <p class="font-semibold">
+          Total Price: $<span id="totalPrice">0.00</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Category-->
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">Our Products</h2>
+        <div id="categories" class="flex flex-wrap justify-center gap-4"></div>
+      </div>
+    </section>
+
+    <!-- Product -->
+    <section class="max-w-6xl mx-auto px-6 pb-12">
+      <div
+        id="products"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      ></div>
+    </section>
+
+    <!-- Detail -->
+    <div
+      id="productModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center"
+    >
+      <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+        <button
+          onclick="closeModal()"
+          class="absolute top-2 right-2 text-gray-500 hover:text-red-600"
+        >
+          ✖
+        </button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
