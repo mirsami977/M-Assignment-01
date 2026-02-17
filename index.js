@@ -1,14 +1,14 @@
-// --- Global Variables ---
+
 let productsData = [];
 let visibleCount = 6;
-let cart = JSON.parse(localStorage.getItem("cart")) || []; // load from localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || []; 
 
-// --- Save Cart to localStorage ---
+
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// --- Load Trending Products ---
+
 async function loadTrending() {
   const res = await fetch("https://fakestoreapi.com/products");
   productsData = await res.json();
@@ -44,7 +44,7 @@ function renderTrending() {
     .join("");
 }
 
-// --- Load Categories ---
+
 async function loadCategories() {
   const res = await fetch("https://fakestoreapi.com/products/categories");
   const categories = await res.json();
@@ -66,7 +66,7 @@ async function loadCategories() {
   `;
 }
 
-// --- Load Products by Category ---
+
 async function loadProducts(category) {
   let url = "https://fakestoreapi.com/products";
   if (category) {
@@ -102,7 +102,7 @@ async function loadProducts(category) {
     .join("");
 }
 
-// --- Show Product Details Modal ---
+
 async function showDetails(id) {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`);
   const product = await res.json();
@@ -125,7 +125,7 @@ function closeModal() {
   document.getElementById("productModal").classList.add("hidden");
 }
 
-// --- Cart System ---
+
 function addToCart(id, title, price, image) {
   cart.push({ id, title, price, image });
   saveCart();
@@ -133,9 +133,9 @@ function addToCart(id, title, price, image) {
 }
 
 function removeFromCart(index) {
-  cart.splice(index, 1); // remove item by index
+    cart.splice(index, 1);
   saveCart();
-  showCart(); // re-render cart modal
+  showCart();
 }
 
 function showCart() {
@@ -168,8 +168,8 @@ function closeCart() {
   document.getElementById("cartModal").classList.add("hidden");
 }
 
-// --- Initial load ---
+
 loadTrending();
 loadCategories();
 loadProducts();
-document.getElementById("cartCount").innerText = cart.length; // show saved cart count
+document.getElementById("cartCount").innerText = cart.length; 
